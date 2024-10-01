@@ -1,8 +1,10 @@
 import type { Metadata } from "next";
-import Link from 'next/link';
-import Image from 'next/image';
+import Link from "next/link";
+import Image from "next/image";
 import "../globals.css";
-
+import Menu from "../../components/Menu";
+import Navbar from "../../components/Navbar";
+import Footer from "../../components/Footer";
 
 export const metadata: Metadata = {
   title: "Student Dashboard",
@@ -14,24 +16,26 @@ export default function DashboardLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const list= [1,2,3,4,5,6,7,8,9]
   return (
-  
-      <div className = "h-screen flex">
-        <div className = "w-1/6 bg-green-300 px-2"> 
-        <Link href="/" className="justify-center lg:justify-start items-center rounded-full flex  gap-2">
-           <Image src="/favicon.ico" alt="logo" width={32} height={32}  />
-           <span className="hidden lg:block">My Logo</span>
+    <div className="h-screen flex">
+      <div className="w-1/6 bg-green-300 px-2">
+        <Link
+          href="/"
+          className="justify-center lg:justify-start items-center rounded-full flex  gap-2"
+        >
+          <Image src="/favicon.ico" alt="logo" width={32} height={32} />
+          <span className="hidden lg:block">My Logo</span>
         </Link>
-        
-        {list.map((num)=> {
-          return(<div key={num} className="bg-black  my-1 p-2 rounded-full text-white text-center">{num}</div>)
-        })}
-        </div>
-        <div className = "w-5/6 lg:w-3/6 bg-yellow-300">Main Dashboard {children}</div>
-        <div className = "hidden lg:block lg:w-2/6 bg-red-300">Sidebar</div>
-
+        <Menu />
       </div>
-    
+      <div className="w-5/6 bg-yellow-300  overflow-scroll">
+        <Navbar />
+        <div className="flex h-screen w-full">
+          <div className="w-full lg:w-4/6 bg-red-300">{children} </div>
+          <div className="hidden lg:block lg:w-2/6 bg-violet-300">Sidebar</div>
+        </div>
+        <Footer />
+      </div>
+    </div>
   );
 }
