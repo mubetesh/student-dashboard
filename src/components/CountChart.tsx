@@ -1,7 +1,30 @@
-"use client";
+"use client"
+<<<<<<< HEAD
 
 import { RadialBarChart, RadialBar, Legend, ResponsiveContainer } from 'recharts';
 
+const data = [
+  {
+    name: '18-24',
+    uv: 31.47,
+    pv: 2400,
+    fill: '#8884d8',
+  },
+  {
+    name: '25-29',
+    uv: 26.69,
+    pv: 4567,
+    fill: '#83a6ed',
+  },
+  {
+    name: '30-34',
+    uv: 15.69,
+    pv: 1398,
+    fill: '#8dd1e1',
+  }
+  ]
+=======
+import {RadialBarChart, RadialBar, Legend, ResponsiveContainer} from "recharts";
 
 const data = [
   {
@@ -34,12 +57,14 @@ const data = [
     pv: 3908,
     fill: '#a4de6c',
   }
-]
+];
+
+
 
 const CountChart = () => {
   return (
     <div>
-      <ResponsiveContainer width="100%" height="100%">
+        <ResponsiveContainer>
         <RadialBarChart cx="50%" cy="50%" innerRadius="10%" outerRadius="80%" barSize={10} data={data}>
           <RadialBar
 
@@ -47,7 +72,11 @@ const CountChart = () => {
             background
             dataKey="uv"
           />
-          <Legend iconSize={10} layout="vertical" verticalAlign="middle" />
+          <Legend
+            iconSize={10}
+            layout="vertical"
+            verticalAlign="middle"
+          />
         </RadialBarChart>
       </ResponsiveContainer>
     </div>

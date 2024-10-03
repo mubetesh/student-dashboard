@@ -2,6 +2,7 @@ import Image from "next/image";
 import UserCard from "../../../components/UserCard";
 import CountChart from "../../../components/CountChart"
 
+import CountChart from "../../../components/CountChart"
 
 const Admin = () => {
   return (
