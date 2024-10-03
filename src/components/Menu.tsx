@@ -27,22 +27,22 @@ const menuItems = [
                 href:"/parent"
             },
             {
-                icon:"/classes.png",
+                icon:"/class.png",
                 label:"Classes",
                 href:"/classes"
             },
             {
-                icon:"/lessons.png",
+                icon:"/lesson.png",
                 label:"Lessons",
                 href:"/lessons"
             },
             {
-                icon:"/exams.png",
+                icon:"/exam.png",
                 label:"Exams",
                 href:"/exams"
             },
             {
-                icon:"/announcements.png",
+                icon:"/announcement.png",
                 label:"Announcements",
                 href:"/announcements"
             },
@@ -58,7 +58,7 @@ const Menu = () => {
                 <h1 className="w-full text-center">{menu.title}</h1>
                 {menu.items.map(item=>(
                     <Link href={item.href} key={item.label} className="flex bg-gray-200 my-2 p-1 items-center justify start gap-2 cursor-pointer">
-                       <div><Image src="/favicon.ico" alt="" width={20} height={20} /></div>
+                       <div><Image src={item.icon} alt="" width={20} height={20} /></div>
                        <span className="hidden lg:block text-sm">{item.label}</span>
                     </Link>
                 ))}

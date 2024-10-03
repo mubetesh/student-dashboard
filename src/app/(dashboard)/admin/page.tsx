@@ -6,7 +6,7 @@ import CountChart from "../../../components/CountChart"
 const Admin = () => {
   return (
     <div className="w-full flex flex-col gap-4 p-4 ">
-      <div className="w-full flex justify-between gap-4 flex-wrap ">
+      <div className="w-full grid  grid-cols-1 md:grid-cols-2 lg:grid-cols-4 justify-between gap-4">
         <UserCard type="teacher" />
         <UserCard type="student" />
         <UserCard type="parent" />
@@ -19,7 +19,7 @@ const Admin = () => {
             <span>Students</span>
             <Image src="/more.png" alt="more" width={20} height={20} />
           </div>
-          <div className="w-[100%] h-60 bg-slate-100">
+          <div >
             <CountChart />
           </div>
           <div className="flex justify-center gap-2">

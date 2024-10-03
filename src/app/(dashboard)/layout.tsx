@@ -1,4 +1,3 @@
-import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
 import "../globals.css";
@@ -6,10 +5,6 @@ import Menu from "../../components/Menu";
 import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
 
-export const metadata: Metadata = {
-  title: "Student Dashboard",
-  description: "Student dashboard UI design for commercial use",
-};
 
 export default function DashboardLayout({
   children,
@@ -23,7 +18,7 @@ export default function DashboardLayout({
           href="/"
           className="justify-center lg:justify-start items-center rounded-full flex  gap-2"
         >
-          <Image src="/favicon.ico" alt="logo" width={32} height={32} />
+          <Image src="/logo.png" alt="logo" width={20} height={20} />
           <span className="hidden lg:block">My Logo</span>
         </Link>
         <Menu />
