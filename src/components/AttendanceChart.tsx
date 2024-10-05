@@ -6,7 +6,6 @@ import {
   Rectangle,
   XAxis,
   YAxis,
-  CartesianGrid,
   Tooltip,
   Legend,
   ResponsiveContainer,
@@ -48,7 +47,7 @@ const AttendanceChart = () => {
       </div>
       <ResponsiveContainer width="100%" height="90%">
         <BarChart width={500} height={300} data={data} barSize={30}>
-          <CartesianGrid strokeDasharray="3 3" />
+          
           <XAxis dataKey="name" />
           <YAxis />
           <Tooltip />
