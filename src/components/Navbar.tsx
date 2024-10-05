@@ -2,16 +2,15 @@ import Image from "next/image";
 
 const Navbar = () => {
   return (
-    <div className="flex justify-end md:justify-between p-4  items-center ">
+    <div className="flex justify-end md:justify-between p-4  items-center border-b-gray-600 border-b-2 ">
       <div className="hidden md:flex justify-start items-center gap-2 text-sm rounded-full ring-[1px] ring-gray py-1 px-2">
         <div className="rounded-full">
-        <Image src="/favicon.ico" alt="" width={20} height={20} />
+        <Image src="/search.png" alt="" width={20} height={20} />
         </div>
-        
-        <input type="text" placeholder="Search..." className="p-1 bg-transparent  outline-none" />
+        <input type="text" placeholder="Search..." className="p-1 bg-transparent  outline-none text-gray-300" />
       </div>
 
-      <div className="flex gap-2 items-center justify-center rounded-full bg-gray-300 py-1 px-2 relative">
+      <div className="flex gap-2 items-center justify-center rounded-full bg-slate-600 py-1 px-2 relative">
         <div className="flex items-center rounded-full justify-center">
           <div className="rounded-full">
           <Image
@@ -19,7 +18,7 @@ const Navbar = () => {
           alt=""
           width={20}
           height={20}
-          
+          className="rounded-full"
         />
           </div>
         
@@ -27,10 +26,10 @@ const Navbar = () => {
         </div>
         
         <div className="flex flex-col">
-          <span className="text-xs leading-3 font-bold">John Doe</span>
-          <span className="text-xs leading-3 font-medium text-right text-gray-500">Admin</span>
+          <span className="text-xs leading-3 font-bold text-violet-400">John Doe</span>
+          <span className="text-xs leading-3 text-right text-gray-300 font-bold">Admin</span>
         </div>
-        <div className="cursor-pointer">Login</div>
+        <div className="cursor-pointer text-sm text-gray-300 font-bold">Login</div>
       </div>
     </div>
   );
