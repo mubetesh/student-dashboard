@@ -4,6 +4,7 @@ import "../globals.css";
 import Menu from "../../components/Menu";
 import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
+import EventCalendar from "../../components/EventCalendar";
 
 
 export default function DashboardLayout({
@@ -19,15 +20,17 @@ export default function DashboardLayout({
           className="justify-center lg:justify-start items-center rounded-full flex  gap-2"
         >
           <Image src="/logo.png" alt="logo" width={20} height={20} />
-          <span className="hidden lg:block text-violet-400 font-bold text-sm">Future Academy</span>
+          <span className="hidden lg:block text-violet-400 font-bold text-md">Future Academy</span>
         </Link>
         <Menu />
       </div>
       <div className="w-[85%] overflow-scroll">
         <Navbar />
-        <div className="flex h-screen w-full">
+        <div className="flex  w-full">
           <div className="w-full lg:w-[75%]  ">{children} </div>
-          <div className="hidden lg:block lg:w-[25%] bg-slate-800 my-4 mx-2 rounded-lg p-2">Sidebar</div>
+          <div className="hidden lg:block lg:w-[25%] bg-slate-800 my-4 mx-2 rounded-lg p-2">
+            <EventCalendar />
+          </div>
         </div>
         <Footer />
       </div>

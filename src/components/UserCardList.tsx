@@ -27,7 +27,7 @@ const UserCardList = () => {
   return (
     <div className="w-full grid  grid-cols-1 sm:grid-cols-2 md:grid-cols-4 justify-center items-center gap-4">
       {items.map((item) => (
-        <div key={item.label} className="w-full flex justify-between mx-auto items-center odd:bg-white odd:text-slate-900  even:bg-slate-800 even:text-white rounded-2xl p-4 flex-1 min-w-32 max-w-72">
+        <div key={item.label} className="w-full flex justify-between mx-auto items-center odd:bg-gray-400 odd:text-slate-900  even:bg-slate-800 even:text-white rounded-2xl p-4 flex-1 min-w-32 max-w-72">
           <div
             className="w-full"
           >

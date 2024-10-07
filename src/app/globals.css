@@ -25,3 +25,11 @@ body {
     text-wrap: balance;
   }
 }
+
+.react-calendar{
+  width: 100% !important;
+  border: none !important;
+  font-family: sans-serif !important;
+  font-size: small;
+
+}
