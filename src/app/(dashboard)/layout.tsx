@@ -28,7 +28,7 @@ export default function DashboardLayout({
         <Navbar />
         <div className="flex  w-full">
           <div className="w-full lg:w-[75%]  ">{children} </div>
-          <div className="hidden lg:block lg:w-[25%] bg-slate-800 my-4 mx-2 rounded-lg p-2">
+          <div className="hidden lg:block lg:w-[25%] bg-slate-800 rounded-lg my-4">
             <EventCalendar />
           </div>
         </div>
