@@ -5,7 +5,7 @@ import FinanceChart from "@/components/FinanceChart";
 
 const Admin = () => {
   return (
-    <div className="w-full flex flex-col  gap-4 p-4 ">
+    <div className="w-full flex flex-col  gap-4 px-2 py-4">
       <div className="w-full">
         <UserCardList />
       </div>

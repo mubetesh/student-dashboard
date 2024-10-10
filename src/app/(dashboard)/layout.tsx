@@ -5,6 +5,7 @@ import Menu from "../../components/Menu";
 import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
 import EventCalendar from "../../components/EventCalendar";
+import Announcements from "../../components/Announcements";
 
 
 export default function DashboardLayout({
@@ -27,9 +28,10 @@ export default function DashboardLayout({
       <div className="w-[85%] overflow-scroll">
         <Navbar />
         <div className="flex  w-full">
-          <div className="w-full lg:w-[75%]  ">{children} </div>
-          <div className="hidden lg:block lg:w-[25%] bg-slate-800 rounded-lg my-4">
+          <div className="w-full lg:w-[72%]  ">{children} </div>
+          <div className="hidden lg:block lg:w-[28%] bg-slate-900 rounded-lg my-4 mx-2">
             <EventCalendar />
+            <Announcements />
           </div>
         </div>
         <Footer />

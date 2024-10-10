@@ -57,7 +57,7 @@ const Menu = () => {
             <div className="flex flex-col justify-center lg:justify-start items-center w-full" key={menu.title}>
                 <h1 className="w-full text-center text-gray-400 font-bold">{menu.title}</h1>
                 {menu.items.map(item=>(
-                    <Link href={item.href} key={item.label} className="flex w-8 lg:w-full bg-slate-700 my-1 p-1  items-center lg:justify-start gap-2 cursor-pointer">
+                    <Link href={item.href} key={item.label} className="flex w-8 lg:w-full bg-slate-800 my-1 p-1  items-center lg:justify-start gap-2 cursor-pointer">
                        <div><Image src={item.icon} alt="" width={20} height={20} /></div>
                        <span className="hidden text-gray-300 lg:block text-sm">{item.label}</span>
                     </Link>
