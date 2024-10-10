@@ -114,12 +114,12 @@ const FinanceChart = () => {
           <Line
             type="monotone"
             dataKey="Expense"
-            stroke="#8884d8"
+            stroke="#FAE27C"
             activeDot={{ r: 5 }}
             strokeWidth={3}
             legendType="circle"
           />
-          <Line type="monotone" dataKey="Income" stroke="#82ca9d" activeDot={{ r: 5 }} strokeWidth={3} legendType="circle"/>
+          <Line type="monotone" dataKey="Income" stroke="#23a6ed" activeDot={{ r: 5 }} strokeWidth={3} legendType="circle"/>
         </LineChart>
       </ResponsiveContainer>
     </div>

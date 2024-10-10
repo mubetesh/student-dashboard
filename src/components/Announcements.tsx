@@ -31,14 +31,13 @@ const Announcements = () => {
         <Image src="/moreDark.png" alt="" width={20} height={20} />
       </div>
         {announcements.map((announcement) => (
-          <div key={announcement.id} className=" p-2 border-r-2 odd:bg-cyan-300 even:bg-emerald-300 border-t-2 rounded-md ">
+          <div key={announcement.id} className=" p-2 border-slate-500 border-r-2 odd:bg-blue-300 even:bg-green-300 border-t-2 rounded-md ">
             <div className="flex justify-between items-center">
-              <h2 className="font-semibold text-slate-600 text-md " >{announcement.title}</h2>
-              <p className="font-semibold text-slate-600 text-xs " >{announcement.time}</p>
+              <h2 className="font-semibold text-slate-600 text-md" >{announcement.title}</h2>
+              <p className="font-semibold text-slate-600 text-xs" >{announcement.time}</p>
             </div>
             <div>
-              <p className="mt-1 text-slate-700 text-sm " >{announcement.description}
-              </p>
+              <p className="mt-1 text-slate-700 text-sm ">{announcement.description}</p>
             </div>
           </div>
         ))}

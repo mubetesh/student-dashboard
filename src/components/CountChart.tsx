@@ -16,7 +16,7 @@ const data = [
   {
     name: "Girls",
     count: 26,
-    fill: "#FAE27C",
+    fill: "#fae27c",
   },
 ];
 const CountChart = () => {
@@ -37,7 +37,7 @@ const CountChart = () => {
             data={data}
           >
             <RadialBar
-              label={{ position: "insideStart", fill: "#000" }}
+              label={{ position: "insideStart", fill: "#555" }}
               background
               dataKey="count"
             />
@@ -53,13 +53,13 @@ const CountChart = () => {
       </div>
 
       <div className="flex justify-center gap-2">
-        {data.map((item) => 
+        {data.map(item =>(
           <div key={item.name} className="flex flex-col gap-1 justify-center items-center">
             <div className={`rounded-full w-4 h-4 bg-[${item.fill}]`}></div>
             <h1 className="font-semibold text-gray-300 text-xs">{item.count}</h1>
-            <h2 className="font-semibold text-gray-300 text-xs">{item.name}({Math.round((item.count/ data[0].count)*100)})%</h2>
+            <p className="font-semibold text-gray-300 text-xs">{item.name}({Math.round((item.count/ data[0].count)*100)})%</p>
           </div>
-        )}
+          ))}
       </div>
     </div>
   );
