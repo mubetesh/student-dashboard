@@ -1,5 +1,4 @@
 
-import Image from "next/image";
 
 const announcements = [
     {
@@ -28,7 +27,7 @@ const Announcements = () => {
         <div className="flex flex-col gap-4 my-4">
       <div className="flex justify-between">
         <h1 className="text-gray-400 font-bold">Announcements</h1>
-        <Image src="/moreDark.png" alt="" width={20} height={20} />
+        <span className="text-gray-300 text-sm px-2" >View All</span>
       </div>
         {announcements.map((announcement) => (
           <div key={announcement.id} className=" p-2 border-slate-500 border-r-2 odd:bg-blue-300 even:bg-green-300 border-t-2 rounded-md ">
