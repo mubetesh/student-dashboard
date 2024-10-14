@@ -1,21 +1,28 @@
-
-import BigCalendar from "@/components/BigCalendar"
+import BigCalendar from "@/components/BigCalendar";
+import EventCalendar from "@/components/EventCalendar";
+import Announcements from "@/components/Announcements";
 
 const StudentPage = () => {
   return (
-    <div className="w-full flex flex-col  gap-4 px-2 py-4">
-      <div>
-        <h1 className="font-semibold text-md text-slate-300">Schedule-4A</h1>
-        <div className="flex justify-end items-center gap-2">
-          <h2 className="text-slate-700 bg-slate-300 px-2 font-semibold text-sm">Work Week</h2>
-          <h2 className="text-slate-800 bg-slate-200 px-2 font-semibold text-sm">Days</h2>
+    <div className="flex  w-full">
+      <div className="w-full lg:w-[72%]  ">
+        <div className="w-full flex flex-col  gap-4 px-2 py-4">
+          <div>
+            <h1 className="font-semibold text-md text-slate-300">
+              Schedule-4A
+            </h1>
+          </div>
+          <div>
+            <BigCalendar />
+          </div>
         </div>
       </div>
-      <div>
-        <BigCalendar />
+      <div className="hidden lg:block lg:w-[28%] bg-slate-900 rounded-lg my-4 mx-2">
+        <EventCalendar />
+        <Announcements />
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default StudentPage
+export default StudentPage;

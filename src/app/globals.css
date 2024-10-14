@@ -39,14 +39,14 @@ body {
 }
 
 .react-calendar__tile--active{
-  background-color:#687387 !important;
+  background-color:#7e9acf !important;
 }
 .react-calendar__tile:hover {
   background-color: #8D98A5 !important;
 }
 .react-calendar__tile--now {
-  background: white !important;
-  color:#687387 !important;
+  background: #687387 !important;
+  color:#dce1e9 !important;
 }
 .react-calendar__month-view__days__day--weekend{
   color: aquamarine !important;
@@ -65,4 +65,100 @@ body {
 }
 .react-calendar__navigation__arrow:hover{
   color:#3e495c !important;
+}
+.rbc-calendar{
+  color: #8D98A5 !important;
+}
+.rbc-toolbar button {
+  color:#8D98A5 !important;
+}
+.rbc-toolbar-label{
+  text-align: right !important;
+  padding: 0px 15px !important;
+  font-weight: bold !important;
+}
+.rbc-btn-group:first-child {
+  display: none !important;
+}
+
+.rbc-btn-group:last-child{
+  font-size: 16px !important;
+  font-weight: bold !important;
+}
+.rbc-btn-group:last-child button{
+  border:none !important;
+  background-color: #dbceff !important;
+  margin-left: 2px !important;
+}
+.rbc-toolbar button.rbc-active{
+  background-color: #8D98A5 !important;
+  color: #ffffff !important;
+  box-flex: none !important;
+}
+.rbc-time-view{
+  border-color: #444 !important;
+  background:lightblue !important;
+}
+
+.rbc-time-header{
+  display: none !important;
+}
+.rbc-time-content{
+  border: none !important;
+}
+.rbc-time-gutter.rbc-time-column{
+  font-size: small !important;
+  text-align: left !important;
+  color: #3e495c !important;
+  align-items: center !important;
+}
+
+.rbc-timeslot-group{
+  width: 100% !important;
+  padding: 5px 12px !important;
+  background: lightblue !important;
+  
+}
+.rbc-time-slot{
+  border-top: none !important;
+  width: 100% !important;
+  padding: 2px !important;
+}
+
+.rbc-events-container{
+  margin:0px !important;
+  padding: 5px !important;
+}
+.rbc-event {
+  display: flex !important;
+  flex-direction: column !important;
+  font-size: 12px !important;
+  padding: 4px 4px !important;
+  min-height: fit-content !important;
+  width: 100% !important;
+  
+  border: none !important;
+  color:#3e495c !important;
+}
+.rbc-event:nth-child(1){
+  background-color: lightskyblue;
+}
+.rbc-event:nth-child(2){
+  background-color: lightgreen;
+}
+.rbc-event:nth-child(3){
+  background-color: lightyellow;
+}
+.rbc-event:nth-child(4){
+  background-color: lightcyan;
+}
+.rbc-event:nth-child(5){
+  background-color: lightpink;
+}
+.rbc-event:nth-child(6){
+  background-color: lightgoldenrodyellow;
+}
+
+.rbc-event-label{
+  margin-bottom: 5px !important;
 }
