@@ -9,10 +9,10 @@ type Student = {
   id: number;
   studentId: string;
   name: string;
-  email: string;
+  email?: string;
   photo: string;
-  phone: string;
-  grade: string;
+  phone?: string;
+  grade: number;
   class: string;
   address: string;
 };
@@ -21,6 +21,7 @@ const columns = [
   {
     header: "Info",
     accessor: "info",
+    className:"px-2"
   },
   {
     header: "Student Id",
@@ -33,8 +34,8 @@ const columns = [
     className: "hidden md:table-cell",
   },
   {
-    header: "Class",
-    accessor: "class",
+    header: "Email",
+    accessor: "email",
     className: "hidden md:table-cell",
   },
   {
@@ -55,8 +56,8 @@ const columns = [
 
 const StudentsList = () => {
   const renderRow = (item: Student) => (
-    <tr key={item.id} >
-      <td className="flex items-center justify-start gap-4 py-4">
+    <tr key={item.id} className="odd:bg-slate-500 even:bg-slate-600">
+      <td className="flex items-center justify-start gap-4 py-2 px-2">
         <Image
           src={item.photo}
           alt="Photo"
@@ -66,13 +67,13 @@ const StudentsList = () => {
         />
         <div>
           <h3 className="font-semibold">{item.name}</h3>
-          <p>{item?.email}</p>
+          <p>{item.class}</p>
         </div>
       </td>
       <td className="hidden md:table-cell">{item.studentId}</td>
       <td className="hidden md:table-cell">{item.grade}</td>
-      <td className="hidden md:table-cell">{item.class}</td>
-      <td className="hidden lg:table-cell">{item.phone}</td>
+      <td className="hidden md:table-cell">{item?.email}</td>
+      <td className="hidden lg:table-cell">{item?.phone}</td>
       <td className="hidden lg:table-cell">{item.address}</td>
       <td>
         <div className="flex items-center gap-2">

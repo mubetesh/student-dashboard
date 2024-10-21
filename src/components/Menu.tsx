@@ -125,7 +125,7 @@ const Menu = () => {
           className="flex flex-col justify-center my-2 lg:justify-start items-center w-full"
           key={menu.title}
         >
-          <h1 className="w-full text-center my-1 text-gray-400 font-bold">
+          <h1 className="w-full text-sm text-center my-1 text-gray-400 font-bold">
             {menu.title}
           </h1>
           {menu.items.map((item) => {

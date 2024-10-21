@@ -21,6 +21,7 @@ const columns = [
   {
     header: "Info",
     accessor: "info",
+    className:"px-2"
   },
   {
     header: "Teacher Id",
@@ -55,8 +56,8 @@ const columns = [
 
 const TeachersList = () => {
   const renderRow = (item: Teacher) => (
-    <tr key={item.id} >
-      <td className="flex items-center justify-start gap-4 py-4">
+    <tr key={item.id} className="odd:bg-slate-600 even:bg-slate-700" >
+      <td className="flex items-center justify-start gap-4 py-2 px-2">
         <Image
           src={item.photo}
           alt="Photo"
@@ -105,9 +106,9 @@ const TeachersList = () => {
             <button className="h-8 w-8 flex rounded-full items-center justify-center bg-slate-700">
               <Image src="/sort.png" alt="" width={14} height={14} />
             </button>
-            <button className="h-8 w-8 flex rounded-full items-center justify-center bg-slate-700">
+            {role==="admin" && (<button className="h-8 w-8 flex rounded-full items-center justify-center bg-slate-700">
               <Image src="/plus.png" alt="" width={14} height={14} />
-            </button>
+            </button>)}
           </div>
         </div>
       </div>

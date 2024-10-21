@@ -3,7 +3,7 @@ const Table = ({columns,renderRow,data}: {columns:{header:string;accessor:string
   return (
     <table className="w-full text-sm">
       <thead>
-        <tr className="text-left font-semibold">
+        <tr className="text-left font-semibold bg-slate-700 h-14 ">
             {columns.map(col=>(
                 <th key={col.accessor} className={col.className}>{col.header}</th>
             ))}
